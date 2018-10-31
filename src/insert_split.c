@@ -30,7 +30,7 @@ insert_split(pSplit *listhead, int ncat, double improve, int max)
     if (max < 2) {
        /* user asked for only 1 to be retained! */
 	s3 = *listhead;
-	if (improve <= s3->improve)
+	if (improve < s3->improve)
 	    return NULL;
 	if (ncat > 1) {
 	    Free(s3);
