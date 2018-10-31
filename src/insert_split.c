@@ -50,7 +50,7 @@ insert_split(pSplit *listhead, int ncat, double improve, int max)
    /* now set up so that the "to be added" is between s1 and s2 */
     s1 = *listhead;
     for (s2 = *listhead; s2; s2 = s2->nextsplit) {
-	if (improve > s2->improve)
+	if (improve >= s2->improve)
 	    break;
 	s1 = s2;
     }
